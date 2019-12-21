@@ -13,6 +13,6 @@ isPalindrome n = n == reverseInt n
 reverseInt :: Int -> Int
 reverseInt = read . reverse . show
 
-
+main :: IO()
 -- main = print (problem4 2) -- 9009
 main = print (problem4 3) -- 906609

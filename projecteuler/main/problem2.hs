@@ -14,6 +14,6 @@ evens list = filter even list
 lessThan :: Int -> [Int] -> [Int]
 lessThan value list = takeWhile (<value) list
 
-
+main :: IO()
 -- main = print (problem2 10) -- 10
 main = print (problem2 4000000) -- 4613732
