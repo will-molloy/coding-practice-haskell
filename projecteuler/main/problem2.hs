@@ -2,6 +2,9 @@
 
 import Data.List
 
+problem2 :: Int -> Int
+problem2 n = sum (evens (lessThan n fibs))
+
 fibs :: [Int]
 fibs = unfoldr (\(a,b) -> Just (a,(b,a+b))) (0,1)
 
@@ -11,5 +14,6 @@ evens list = filter even list
 lessThan :: Int -> [Int] -> [Int]
 lessThan value list = takeWhile (<value) list
 
--- 4613732
-main = print (sum (evens (lessThan 4000000 fibs)))
+
+-- main = print (problem2 10) -- 10
+main = print (problem2 4000000) -- 4613732
