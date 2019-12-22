@@ -10,5 +10,5 @@ squareOfSum :: Int -> Int
 squareOfSum n = (sum [1..n])^2
 
 main :: IO()
--- main = print (problem6 10) -- 2640
-main = print (problem6 100) -- 25164150
+-- main = print $ problem6 10 -- 2640
+main = print $ problem6 100 -- 25164150

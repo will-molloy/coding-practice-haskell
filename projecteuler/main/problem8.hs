@@ -26,14 +26,11 @@ number = "73167176531330624919225119674426574742355349194934\
 \71636269561882670428252483600823257530420752963450"
 
 problem8 :: Int -> Int
-problem8 n = maximum (map product (sliding n (strToIntList number)))
-
-strToIntList :: String -> [Int]
-strToIntList = map digitToInt
+problem8 n = maximum $ map product $ sliding n $ map digitToInt $ number
 
 sliding :: Int -> [Int] -> [[Int]]
 sliding n = foldr (zipWith (:)) (repeat []) . take n . tails
 
 main :: IO()
--- main = print (problem8 4) -- 5832
-main = print (problem8 13) -- 23514624000
+-- main = print $ problem8 4 -- 5832
+main = print $ problem8 13 -- 23514624000
